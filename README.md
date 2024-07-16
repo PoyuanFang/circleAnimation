@@ -17,5 +17,5 @@ css animation circle progress bar
 2.設定偽元素內縮作為遮罩
 3.使用js setInterval()控制角度由0-360度
 
-參考連結：https://www.youtube.com/watch?v=SKU2gExpkPI
+參考連結： <https://www.youtube.com/watch?v=SKU2gExpkPI>
 ```
