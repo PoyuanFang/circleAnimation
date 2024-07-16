@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>circle animation infinity</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      background: conic-gradient(#000000 0deg, #d6d6d6 0deg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .circle::before {
+      content: "";
+      position: absolute;
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      background: white;
+    }
+
+    .arrow {
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s ease-in-out;
+      background: white;
+    }
+
+    .arrow:hover {
+      transform: scale(1.1);
+    }
+
+    i {
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="circle">
+      <button class="arrow">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    let circle = document.querySelector(".circle");
+    let progressStartValue = 0;
+    let progressEndValue = 100;
+    let speed = 20;
+
+    function animateCircle() {
+      let progress = setInterval(() => {
+        progressStartValue++;
+
+        circle.style.background = `conic-gradient(#000000 ${progressStartValue * 3.6}deg, #ededed 0deg)`;
+
+        if (progressStartValue >= progressEndValue) {
+          progressStartValue = 0;
+          circle.style.background = `conic-gradient(#7d2ae8 0deg, #ededed 0deg)`;
+        }
+      }, speed);
+    }
+
+    animateCircle();
+
+    //測試按鈕功能
+    let btn = document.querySelector(".arrow");
+    btn.addEventListener('click', () => {
+      console.log("按鈕功能測試");
+    });
+
+  </script>
+</body>
+
+</html>
