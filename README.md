@@ -1,5 +1,6 @@
-css animation circle progress bar.
-為方便閱讀將css與js寫在一起.
+css animation circle progress bar
+
+為方便閱讀將css與js寫在一起
 
 ## circleAnimation1
 
