@@ -16,6 +16,5 @@ css animation circle progress bar
 1.利用conic-gradient圓錐漸層預設角度為0
 2.設定偽元素內縮作為遮罩
 3.使用js setInterval()控制角度由0-360度
-
-參考連結： <https://www.youtube.com/watch?v=SKU2gExpkPI>
 ```
+circleAnimation2參考連結： <https://www.youtube.com/watch?v=SKU2gExpkPI>
